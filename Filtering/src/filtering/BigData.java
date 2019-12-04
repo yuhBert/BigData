@@ -165,12 +165,12 @@ public class BigData extends javax.swing.JFrame {
             {
               // create a mysql database connection
               String myDriver ="com.mysql.jdbc.Driver";
-              String myUrl = "jdbc:mysql://localhost/bigdata";
+              String myUrl = "jdbc:mysql://localhost/yuhbert";
               Class.forName(myDriver);
               Connection conn = (Connection) DriverManager.getConnection(myUrl, "root", "");
               
               // the mysql insert statement
-              String query = " insert into countword(word,count,school)"
+              String query = " insert into countHtml(Words,Count,School)"
                 + " values (?,?,?)";
 
               // create the mysql insert preparedstatement

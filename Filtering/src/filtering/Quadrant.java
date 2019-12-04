@@ -5,7 +5,6 @@
  */
 package filtering;
 
-import static filtering.Timer.state;
 import java.awt.Color;
 import static java.lang.Thread.sleep;
 import java.util.Calendar;

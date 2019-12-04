@@ -10,7 +10,7 @@ import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.*;
 import javax.imageio.ImageIO;
-import javax.swing.JFrame;
+
 /**
  *
  * @author mariscalyu_SD2082
@@ -33,16 +33,21 @@ public class GrayScale {
                 for (int j = 0; j < width; j++) {
 
                     Color c = new Color(image.getRGB(j, i));
-                    int red = (int) (c.getRed() * 0.299);
-                    int green = (int) (c.getGreen() * 0.587);
-                    int blue = (int) (c.getBlue() * 0.114);
-                    Color newColor = new Color(0,0,0);
-
-                    image.setRGB(j, i, newColor.getRGB());
+                    Color w = new Color(255,255,255);
+                    Color b = new Color(0,0,0);
+//                    int red = (int) (c.getRed() * 0.299);
+//                    int green = (int) (c.getGreen() * 0.587);
+//                    int blue = (int) (c.getBlue() * 0.114);
+//                    Color newColor = new Color(0,0,0);
+                if(c.getRGB() == b.getRGB() || c.getBlue() < 60 && c.getRed() < 60 && c.getGreen() < 50){
+                
+                }else{
+                    image.setRGB(j, i, w.getRGB());
                 }
             }
+            }
 
-            File ouptut = new File("C:\\Users\\mariscalyu_SD2082\\Documents\\NetBeansProjects\\images/black.png");
+            File ouptut = new File("C:\\Users\\mariscalyu_SD2082\\Documents\\NetBeansProjects\\images/newFlower.png");
             ImageIO.write(image, "png", ouptut);
 
         } catch (Exception e) {
@@ -53,3 +58,5 @@ public class GrayScale {
         GrayScale obj = new GrayScale();
     }
 }
+
+
