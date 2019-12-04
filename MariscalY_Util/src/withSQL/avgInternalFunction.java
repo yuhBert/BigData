@@ -16,6 +16,7 @@ public class avgInternalFunction {
 
     public static void main(String[] args)
             throws Exception {
+
         LocalTime start = java.time.LocalTime.now();
         System.out.println("Time Started " + start);
         try {
